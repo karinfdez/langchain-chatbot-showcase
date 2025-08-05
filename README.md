@@ -18,15 +18,6 @@ The application implements a modern split-screen interface with company informat
 This chatbot uses OpenAIEmbeddings to convert user questions into vector representations, which are then matched against stored document embeddings in a Supabase table using the SupabaseVectorStore. The most relevant documents are retrieved via vector similarity search using a stored procedure (match_documents). Both the user's original question and the retrieved documents are passed to the ChatOpenAI language model. LangChain's PromptTemplate and RunnableSequence components help structure this process, enabling the LLM to generate natural-language responses grounded in the retrieved data.
 
 
-### Vector Store Implementation
-
-The application uses a Supabase vector database to store and retrieve document embeddings:
-
-![Supabase Vector Store](./public/supabase-embeddings.png)
-
-*Note: The above image shows how documents are embedded and stored in the Supabase vector database.*
-
-
 ## Tech Stack
 
 - **Next.js**: React framework for building the web application
