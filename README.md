@@ -1,6 +1,7 @@
 # LumaTech Knowledge Chatbot
 
-This project is a custom chatbot application built using Next.js, LangChain JS, and Supabase to implement a Retrieval-Augmented Generation (RAG) architecture. The chatbot answers questions about a fictional company called LumaTech using information stored in a Supabase vector database.
+## Note  
+This repository is a public showcase of a private project. The actual source code is private, but this outlines the architecture, technologies used, and demo links.
 
 ## Live Demo
 
@@ -9,11 +10,13 @@ Try out the live demo: [LumaTech Chatbot](https://langchain-chatbot-pi.vercel.ap
 
 ## Project Description
 
-The application implements a modern split-screen interface with company information displayed on the left and an interactive chatbot on the right. The chatbot uses LangChain JS and Supabase to retrieve and process relevant information from a vector database.
+The application implements a modern split-screen interface with company information displayed on the left and an interactive chatbot on the right. The chatbot answers questions about a fictional company called LumaTech using information stored in a Supabase vector database. It is built using Next.js, LangChain JS, and Supabase to implement a Retrieval-Augmented Generation (RAG) architecture
+
 
 ### How it Works
 
 This chatbot uses OpenAIEmbeddings to convert user questions into vector representations, which are then matched against stored document embeddings in a Supabase table using the SupabaseVectorStore. The most relevant documents are retrieved via vector similarity search using a stored procedure (match_documents). Both the user's original question and the retrieved documents are passed to the ChatOpenAI language model. LangChain's PromptTemplate and RunnableSequence components help structure this process, enabling the LLM to generate natural-language responses grounded in the retrieved data.
+
 
 ### Vector Store Implementation
 
@@ -22,6 +25,7 @@ The application uses a Supabase vector database to store and retrieve document e
 ![Supabase Vector Store](./public/supabase-embeddings.png)
 
 *Note: The above image shows how documents are embedded and stored in the Supabase vector database.*
+
 
 ## Tech Stack
 
@@ -113,13 +117,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Future Enhancements
-
-- **Chat Memory**: Store conversation history for contextual responses
-- **User Authentication**: Add login functionality to personalize experiences
-- **Multiple Document Sources**: Support for different company information sources
-- **Chat Export**: Allow users to download or share chat transcripts
-- **Mobile Optimization**: Enhanced responsive design for mobile devices
 
 ## Learn More
 
@@ -128,10 +125,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API
 - [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings) - Learn about text embeddings
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
